@@ -1,0 +1,210 @@
+html {
+  overflow: hidden; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif; }
+
+.hr {
+  position: relative;
+  width: 100%;
+  height: 10px;
+  background: #ea8727; }
+
+.logo {
+  max-width: 274px; }
+
+header {
+  padding: 17px 112px 17px 112px;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+.hr.topHr {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 5px;
+  background: #ea8727; }
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 22px;
+  color: #eb8827; }
+  .navigation a {
+    text-decoration: none;
+    font-weight: bold;
+    font-style: normal;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #eb8827; }
+  .navigation .active {
+    color: #6d6f71; }
+
+.icons {
+  display: flex;
+  flex: 1;
+  column-gap: 22px; }
+
+.material-symbols-outlined {
+  font-size: 26px !important;
+  font-weight: bold !important;
+  color: #eb8827;
+  font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48; }
+
+.hiddenSearch {
+  display: none; }
+
+.searchBar {
+  background: white;
+  border: none;
+  color: #eb8827;
+  font-size: 22px; }
+
+.searchBar:hover {
+  background: white;
+  border: none; }
+
+.searchBar:focus {
+  background: white;
+  border: none;
+  outline: none; }
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #eb8827;
+  opacity: 1;
+  /* Firefox */ }
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #eb8827; }
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #eb8827; }
+
+.material-symbols-outlined.hamburger {
+  display: none;
+  color: #666;
+  cursor: pointer; }
+
+.hiddenMenu {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+  width: 100%; }
+  .hiddenMenu .list {
+    width: 50%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    transition: transform 250ms ease-in; }
+    .hiddenMenu .list a {
+      width: 100%;
+      padding: 11px;
+      text-decoration: none;
+      font-weight: bold;
+      font-style: normal;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: #eb8827; }
+    .hiddenMenu .list a:hover {
+      background: #e5e5e5; }
+    .hiddenMenu .list .active {
+      color: #6d6f71; }
+
+@media only screen and (max-width: 980px) {
+  .material-symbols-outlined.hamburger {
+    display: inline-block; }
+  .navigation a {
+    display: none; }
+  .hr.topHr {
+    display: block; }
+  .hiddenMenu {
+    display: none; } }
+
+.carousel {
+  position: relative;
+  min-height: 400px;
+  width: 100%;
+  margin: 0 auto; }
+  .carousel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }
+
+.carousel__track-container {
+  position: relative;
+  background-color: #eb8827;
+  height: 600px;
+  overflow: hidden; }
+
+.carousel__track {
+  position: relative;
+  height: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  transition: transform 250ms ease-in; }
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%; }
+
+.carousel__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 150px;
+  font-weight: bolder;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: 2px;
+  cursor: pointer;
+  z-index: 1; }
+
+.carousel__button.--right {
+  left: calc(100% - 36px); }
+
+.carousel__button.--left {
+  left: 0; }
+
+.carousel__nav {
+  position: absolute;
+  top: 98%;
+  width: 100%;
+  transform: translateY(-100%);
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  column-gap: 7px;
+  padding: 2px; }
+
+.carousel__indicator {
+  border: 3px solid #e5e5e5;
+  border-radius: 50%;
+  height: 12px;
+  width: 12px;
+  padding: 0;
+  box-sizing: content-box;
+  background: -webkit-linear-gradient(top, #999999 0%, #e1e1e1 100%);
+  background: -moz-linear-gradient(top, #999999 0%, #e1e1e1 100%);
+  cursor: pointer; }
+
+.carousel__indicator.current-slide {
+  background: #999999; }
