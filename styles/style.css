@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 html {
-  overflow: hidden; }
+  overflow-x: hidden; }
 
 body {
   margin: 0;
@@ -22,7 +22,8 @@ header {
   flex: 1;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  overflow: hidden; }
 
 .hr.topHr {
   display: none;
@@ -37,6 +38,8 @@ header {
   align-items: center;
   column-gap: 22px;
   color: #eb8827; }
+  .navigation :hover {
+    color: #6d6f71; }
   .navigation a {
     text-decoration: none;
     font-weight: bold;
@@ -52,6 +55,14 @@ header {
   flex: 1;
   column-gap: 22px; }
 
+i {
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold !important;
+  color: #eb8827; }
+  i :hover {
+    color: #6d6f71; }
+
 .material-symbols-outlined {
   font-size: 26px !important;
   font-weight: bold !important;
@@ -59,7 +70,8 @@ header {
   font-variation-settings: "FILL" 0, "wght" 700, "GRAD" 0, "opsz" 48; }
 
 .hiddenSearch {
-  display: none; }
+  display: none;
+  align-items: center; }
 
 .searchBar {
   background: white;
@@ -101,7 +113,7 @@ header {
   justify-content: center;
   position: absolute;
   overflow: hidden;
-  z-index: 2;
+  z-index: 5;
   width: 100%; }
   .hiddenMenu .list {
     width: 50%;
@@ -160,7 +172,8 @@ header {
   position: relative; }
   .carousel__slide-article img {
     width: 100%;
-    height: 100%; }
+    height: 100%;
+    object-fit: cover; }
 
 .carousel__info {
   color: white;
@@ -170,7 +183,8 @@ header {
   top: 226px;
   left: 112px; }
   .carousel__info p {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    width: 100%; }
   .carousel__info .carousel__info-heading {
     width: 600px;
     height: 120px;
@@ -180,7 +194,8 @@ header {
     line-height: 60px;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    overflow: hidden; }
     .carousel__info .carousel__info-heading .carousel__info-accent {
       background: #ea8727;
       width: 8px;
@@ -197,7 +212,8 @@ header {
     letter-spacing: 2px;
     font-weight: 600;
     font-size: 17px;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    overflow: hidden; }
   .carousel__info .carousel__info-link {
     padding: 15px 40px;
     cursor: pointer;
@@ -274,6 +290,56 @@ header {
 
 .carousel__indicator.current-slide {
   background: #666666; }
+
+.blurb {
+  max-width: 100%;
+  margin: 0 !important; }
+  .blurb img {
+    object-fit: cover;
+    height: 690px;
+    width: 100%; }
+  .blurb .blurb__info {
+    background: white;
+    z-index: 1;
+    padding: 60px 0 0 0; }
+    .blurb .blurb__info .blurb__Heading {
+      padding: 4% 8vw; }
+      .blurb .blurb__info .blurb__Heading h2 {
+        font-size: 42px;
+        font-weight: 700;
+        color: #333; }
+      .blurb .blurb__info .blurb__Heading .blurb__accent {
+        margin-top: 20px;
+        width: 50px;
+        height: 6px;
+        background-color: #ea8727; }
+    .blurb .blurb__info .blurb__content {
+      padding: 0 8vw; }
+      .blurb .blurb__info .blurb__content nav {
+        margin: 30px 0; }
+        .blurb .blurb__info .blurb__content nav :hover {
+          background: #2a2a2a;
+          color: white; }
+      .blurb .blurb__info .blurb__content .blurb__link {
+        padding: 12px 10px 12px 30px;
+        cursor: pointer;
+        outline: none;
+        box-sizing: border-box;
+        color: #2a2a2a;
+        text-decoration: none;
+        white-space: nowrap;
+        text-align: left;
+        line-height: 50px;
+        letter-spacing: 3px;
+        font-weight: 700;
+        font-size: 14px;
+        border-color: #2a2a2a;
+        border-style: solid;
+        border-width: 4px;
+        background-color: rgba(0, 0, 0, 0);
+        transform-origin: 123.938px 27px; }
+        .blurb .blurb__info .blurb__content .blurb__link i {
+          color: white; }
 
 @media only screen and (max-width: 980px) {
   .material-symbols-outlined.hamburger {

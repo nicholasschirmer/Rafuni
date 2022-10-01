@@ -30,12 +30,3 @@ const toggleMenu = () => {
     }, 250);
   }
 };
-
-const toggleSearch = () => {
-  showSearch = !showSearch;
-  if (showSearch) {
-    searchPosAni();
-  } else {
-    searchPosNeg();
-  }
-};

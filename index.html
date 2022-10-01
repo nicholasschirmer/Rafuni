@@ -43,8 +43,12 @@
           onclick="route()"
         />
         <div class="hiddenSearch">
-          <input type="search" class="searchBar" placeholder="Search..." />
-          <span class="material-symbols-outlined"> close </span>
+          <input type="Text" class="searchBar" placeholder="Search..." />
+          <i
+            class="fa fa-times searchToggle"
+            aria-hidden="true"
+            onclick="toggleSearch()"
+          ></i>
         </div>
         <nav class="navigation">
           <a
@@ -73,7 +77,11 @@
             >Contact Us</a
           >
           <div class="icons">
-            <i class="fa fa-search" aria-hidden="true"></i>
+            <i
+              class="fa fa-search searchToggle"
+              aria-hidden="true"
+              onclick="toggleSearch()"
+            ></i>
             <span
               class="material-symbols-outlined hamburger"
               id="hamburger"

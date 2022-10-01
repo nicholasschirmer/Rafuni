@@ -1,6 +1,7 @@
 {
-  "scripts":{
-    "watch:scss": "node-sass -w style.scss styles/style.css"
+  "scripts": {
+    "css": "node-sass style.scss -o styles",
+    "css:watch": "npm run css && node-sass style.scss -wo styles"
   },
   "dependencies": {
     "http-server": "^14.1.1",
