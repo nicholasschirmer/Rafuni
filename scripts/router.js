@@ -6,43 +6,25 @@ const route = (event) => {
 };
 
 const routes = {
-  404: "/pages/error.html",
-  "/": "/pages/home.html",
-  "/about-us": "/pages/aboutUs.html",
-  "/services": "/pages/services.html",
-  "/contact-us": "/pages/contactUs.html",
-};
-
-const changeTitle = async () => {
-  const path = window.location.pathname;
-  if (routes[path]) {
-    switch (path) {
-      case "/":
-        document.title = "Home | Rafuni";
-        carousel();
-        break;
-      case "/about-us":
-        document.title = "About Us | Rafuni";
-        break;
-      case "/services":
-        document.title = "Services | Rafuni";
-        break;
-      case "/contact-us":
-        document.title = "Contact Us | Rafuni";
-      default:
-        break;
-    }
-  } else {
-    document.title = "Error 404";
-  }
+  404: { path: "/pages/error.html", title: "Error | Rafuni" },
+  "/": { path: "/pages/home.html", title: "Home | Rafuni" },
+  "/about-us": { path: "/pages/aboutUs.html", title: "About Us | Rafuni" },
+  "/services": { path: "/pages/services.html", title: "Services | Rafuni" },
+  "/contact-us": {
+    path: "/pages/contactUs.html",
+    title: "Contatc Us | Rafuni",
+  },
 };
 
 const handleLocation = async () => {
   const path = window.location.pathname;
   const route = routes[path] || routes[404];
-  const html = await fetch(route).then((data) => data.text());
+  const html = await fetch(route.path).then((data) => data.text());
   document.getElementById("page-container").innerHTML = html;
-  changeTitle();
+  if (path == "/") {
+    carousel();
+  }
+  document.title = route.title;
 };
 
 window.onpopstate = handleLocation;

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="">
   <div class="carousel">
     <button class="carousel__button --left">
       <span class="material-symbols-outlined"> chevron_left </span>
@@ -6,15 +6,45 @@
     <div class="carousel__track-container">
       <ul class="carousel__track">
         <li class="carousel__slide current-slide">
-          <article>
+          <article class="carousel__slide-article">
             <img src="/images/slide1.png" alt="" />
+            <div class="carousel__info">
+              <div class="carousel__info-heading">
+                <div class="carousel__info-accent"></div>
+                <p>WELCOME TO RAFUNI</p>
+              </div>
+              <div class="carousel__info-blurb">
+                <p>
+                  Construction | Engineering Services | Geotechnical
+                  Investigations
+                </p>
+              </div>
+              <nav>
+                <a
+                  href="/services"
+                  onclick="route(); changeActive('services')"
+                  class="carousel__info-link"
+                >
+                  WHAT WE DO
+                  <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </a>
+              </nav>
+            </div>
           </article>
         </li>
         <li class="carousel__slide">
-          <img src="/images/slide2.png" alt="" />
+          <article class="carousel__slide-article">
+            <img src="/images/slide2.png" alt="" />
+          </article>
         </li>
-        <li class="carousel__slide">
-          <img src="/images/slide3.png" alt="" />
+        <li class="carousel__slide previous-slide">
+          <article class="carousel__slide-article">
+            <img src="/images/slide3.png" alt="" />
+            <div class="carousel__info">
+              <div class="carousel__info-accent"></div>
+              <div class="carousel__info-heading">WELCOME TO RAFUNI</div>
+            </div>
+          </article>
         </li>
       </ul>
     </div>

@@ -5,19 +5,42 @@ const carousel = () => {
   const prevBtn = document.querySelector(".--left");
   const carouselNav = document.querySelector(".carousel__nav");
   const dots = Array.from(carouselNav.children);
+  var runs = 1;
 
   const slideSize = slides[0].getBoundingClientRect();
   const slideWidth = slideSize.width;
 
-  for (let i = 0; i < slides.length; i++) {
-    const element = slides[i];
-    slides[i].style.left = slideWidth * i + "px";
-  }
+  // for (let i = 0; i < slides.length; i++) {
+  //   const element = slides[i];
+  //   slides[i].style.left = slideWidth * i + "px";
+  // }
 
-  const moveToSlide = (track, currentSlide, targetSlide) => {
-    track.style.transform = "translateX(-" + targetSlide.style.left + ")";
+  const moveToNextSlide = (track, currentSlide, targetSlide) => {
+    if (runs == 1) {
+      track.querySelector(".previous-slide").classList.remove("previous-slide");
+      runs--;
+    }
     currentSlide.classList.remove("current-slide");
+    currentSlide.classList.add("previous-slide");
     targetSlide.classList.add("current-slide");
+    carouselSlideNext();
+    setTimeout(() => {
+      currentSlide.classList.remove("previous-slide");
+    }, 500);
+  };
+
+  const moveToPrevSlide = (track, currentSlide, targetSlide) => {
+    if (runs == 1) {
+      track.querySelector(".previous-slide").classList.remove("previous-slide");
+      runs--;
+    }
+    currentSlide.classList.remove("current-slide");
+    currentSlide.classList.add("previous-slide");
+    targetSlide.classList.add("current-slide");
+    carouselSlidePrev();
+    setTimeout(() => {
+      currentSlide.classList.remove("previous-slide");
+    }, 500);
   };
 
   const updateDots = (currentDot, targetDot) => {
@@ -33,7 +56,7 @@ const carousel = () => {
     } else {
       targetSlide = currentSlide.nextElementSibling;
     }
-    moveToSlide(track, currentSlide, targetSlide);
+    moveToNextSlide(track, currentSlide, targetSlide);
     let currentDot = carouselNav.querySelector(".current-slide");
     let targetDot = {};
     if (currentDot === dots[dots.length - 1]) {
@@ -52,7 +75,7 @@ const carousel = () => {
     } else {
       targetSlide = currentSlide.previousElementSibling;
     }
-    moveToSlide(track, currentSlide, targetSlide);
+    moveToPrevSlide(track, currentSlide, targetSlide);
     let currentDot = carouselNav.querySelector(".current-slide");
     let targetDot = {};
     if (currentDot === dots[0]) {
@@ -78,21 +101,21 @@ const carousel = () => {
 
     let currentSlide = track.querySelector(".current-slide");
     let currentDot = carouselNav.querySelector(".current-slide");
+    let currentIndex = dots.findIndex((dot) => dot === currentDot);
     let targetIndex = dots.findIndex((dot) => dot === targetDot);
     let targetSlide = slides[targetIndex];
 
-    moveToSlide(track, currentSlide, targetSlide);
+    if (targetIndex > currentIndex) {
+      moveToNextSlide(track, currentSlide, targetSlide);
+    } else {
+      moveToPrevSlide(track, currentSlide, targetSlide);
+    }
     updateDots(currentDot, targetDot);
   });
 
   const autoPage = () => {
     setTimeout(() => {
       slideNext();
-      autoPage();
     }, 10000);
   };
-
-  autoPage();
 };
-
-carousel();

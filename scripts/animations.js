@@ -16,3 +16,19 @@ const searchPosAni = () => {
 };
 
 const searchPosNeg = () => {};
+
+const carouselSlideNext = () => {
+  gsap.fromTo(
+    ".carousel__slide.current-slide",
+    { y: "-100%" },
+    { y: 0, duration: 0.5, ease: "power" }
+  );
+};
+
+const carouselSlidePrev = () => {
+  gsap.fromTo(
+    ".carousel__slide.current-slide",
+    { y: "100%" },
+    { y: 0, duration: 0.5, ease: "power" }
+  );
+};

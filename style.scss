@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
 //general Css
 html {
   overflow: hidden;
@@ -6,7 +8,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", Helvetica, Arial, Lucida, sans-serif;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .hr {
@@ -165,24 +167,6 @@ header {
   // display: none;
 }
 
-@media only screen and (max-width: 980px) {
-  .material-symbols-outlined.hamburger {
-    display: inline-block;
-  }
-
-  .navigation a {
-    display: none;
-  }
-
-  .hr.topHr {
-    display: block;
-  }
-
-  .hiddenMenu {
-    display: none;
-  }
-}
-
 // Home CSS
 
 // carousel CSS
@@ -191,12 +175,6 @@ header {
   min-height: 400px;
   width: 100%;
   margin: 0 auto;
-
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
 }
 
 .carousel__track-container {
@@ -220,6 +198,90 @@ header {
   top: 0;
   bottom: 0;
   width: 100%;
+  z-index: 0;
+}
+
+.carousel__slide-article {
+  height: 100%;
+  width: 100%;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.carousel__info {
+  color: white;
+  position: absolute;
+  z-index: 2;
+  background: transparent;
+  top: 226px;
+  left: 112px;
+
+  p {
+    margin-bottom: 0;
+  }
+
+  .carousel__info-heading {
+    width: 600px;
+    height: 120px;
+    color: white;
+    font-size: 60px;
+    font-weight: 750;
+    line-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .carousel__info-accent {
+      background: #ea8727;
+      width: 8px;
+      height: 104px;
+      margin: 0;
+      margin-right: 10px;
+    }
+  }
+
+  .carousel__info-blurb {
+    margin-top: 30px;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    white-space: normal;
+    width: 600px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 30px;
+  }
+
+  .carousel__info-link {
+    padding: 15px 40px;
+    cursor: pointer;
+    outline: none;
+    box-sizing: border-box;
+    color: rgb(234, 135, 39);
+    text-decoration: none;
+    white-space: nowrap;
+    text-align: left;
+    line-height: 50px;
+    letter-spacing: 3px;
+    font-weight: 900;
+    font-size: 15px;
+    border-color: rgb(234, 135, 39);
+    border-style: solid;
+    border-width: 2px;
+    padding-left: 45px;
+    padding-right: 45px;
+    background-color: rgba(0, 0, 0, 0);
+    transform-origin: 123.938px 27px;
+    opacity: 1;
+    transform: translate(0px, 0px);
+    visibility: visible;
+    border-radius: 0px;
+  }
 }
 
 .carousel__button {
@@ -237,10 +299,12 @@ header {
 
 .carousel__button.--right {
   left: calc(100% - 36px);
+  z-index: 3;
 }
 
 .carousel__button.--left {
   left: 0;
+  z-index: 3;
 }
 
 .carousel__nav {
@@ -254,6 +318,7 @@ header {
   justify-content: center;
   column-gap: 7px;
   padding: 2px;
+  z-index: 2;
 }
 
 .carousel__indicator {
@@ -268,6 +333,34 @@ header {
   cursor: pointer;
 }
 
+.current-slide {
+  z-index: 2;
+}
+
+.previous-slide {
+  z-index: 1;
+}
+
 .carousel__indicator.current-slide {
-  background: #999999;
+  background: #666666;
+}
+
+//media queries
+
+@media only screen and (max-width: 980px) {
+  .material-symbols-outlined.hamburger {
+    display: inline-block;
+  }
+
+  .navigation a {
+    display: none;
+  }
+
+  .hr.topHr {
+    display: block;
+  }
+
+  .hiddenMenu {
+    display: none;
+  }
 }
