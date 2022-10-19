@@ -113,17 +113,17 @@ const newSlide = () => {
   );
 };
 
-function yearsEstablished() {
-  let counts = setInterval(updated);
-  let upto = 0;
-  function updated() {
-    var count = document.getElementById("yearsEstablished");
-    count.innerHTML = Math.round(++upto / 100);
-    if (upto === 400) {
-      clearInterval(counts);
-    }
-  }
-}
-setTimeout(() => {
-  yearsEstablished();
-}, 100);
+// function yearsEstablished() {
+//   let counts = setInterval(updated);
+//   let upto = 0;
+//   function updated() {
+//     var count = document.getElementById("yearsEstablished");
+//     count.innerHTML = Math.round(++upto / 100);
+//     if (upto === 400) {
+//       clearInterval(counts);
+//     }
+//   }
+// }
+// setTimeout(() => {
+//   yearsEstablished();
+// }, 100);
