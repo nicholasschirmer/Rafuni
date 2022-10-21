@@ -7,7 +7,7 @@ const route = (event) => {
 
 const routes = {
   404: { path: "/pages/error.html", title: "Error | Rafuni" },
-  "/home": { path: "/pages/home.html", title: "Home | Rafuni" },
+  "/": { path: "/pages/home.html", title: "Home | Rafuni" },
   "/about-us": { path: "/pages/aboutUs.html", title: "About Us | Rafuni" },
   "/services": { path: "/pages/services.html", title: "Services | Rafuni" },
   "/contact-us": {
