@@ -14,6 +14,10 @@ const changeActive = (index) => {
 let showMenu = false;
 let showSearch = false;
 
+function goHome() {
+  location.href = "/";
+}
+
 const toggleMenu = () => {
   showMenu = !showMenu;
   const hidden = document.querySelector(".hiddenMenu");

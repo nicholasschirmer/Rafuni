@@ -654,6 +654,23 @@ i {
       width: 30%;
       max-width: 170px; }
 
+.searchHeading {
+  margin: 4% 8vw; }
+  .searchHeading h2 {
+    color: #333; }
+  .searchHeading button {
+    background: #fff;
+    font-size: 23px;
+    font-weight: 800; }
+
+.searchResults {
+  color: #333;
+  min-height: 520px; }
+  .searchResults .card a {
+    text-decoration: none; }
+  .searchResults .card h2 {
+    text-align: center; }
+
 @media only screen and (max-width: 980px) {
   .material-symbols-outlined.hamburger {
     display: inline-block; }

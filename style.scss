@@ -854,6 +854,34 @@ i {
     }
   }
 }
+
+//Search
+.searchHeading {
+  margin: 4% 8vw;
+  h2 {
+    color: #333;
+  }
+  button {
+    background: #fff;
+    font-size: 23px;
+    font-weight: 800;
+  }
+}
+
+.searchResults {
+  color: #333;
+  min-height: 520px;
+
+  .card {
+    a {
+      text-decoration: none;
+    }
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
 //media queries
 
 //mobile

@@ -36,19 +36,18 @@
   <body>
     <div id="root">
       <header class="container">
-        <img
-          src="/images/Rafuni-PTY-LTD-Logo.png"
-          class="logo"
-          alt=""
-          onclick="route()"
-        />
+        <a href="/">
+          <img
+            src="/images/Rafuni-PTY-LTD-Logo.png"
+            class="logo"
+            alt=""
+            onclick="goHome(); route()"
+          />
+        </a>
+
         <div class="hiddenSearch">
           <input type="Text" class="searchBar" placeholder="Search..." />
-          <i
-            class="fa fa-times searchToggle"
-            aria-hidden="true"
-            onclick="toggleSearch()"
-          ></i>
+          <i class="fa fa-times searchToggle" aria-hidden="true" onclick=""></i>
         </div>
         <nav class="navigation">
           <a
@@ -80,7 +79,7 @@
             <span
               class="fa fa-search searchToggle"
               aria-hidden="true"
-              onclick="toggleSearch(); goSearch(); route()"
+              onclick="goSearch(); route()"
             ></span>
             <span
               class="material-symbols-outlined hamburger"
