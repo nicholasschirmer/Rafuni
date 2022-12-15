@@ -38,6 +38,10 @@ const routes = {
     path: "/pages/services/Waste.html",
     title: "Our Services | Rafuni",
   },
+  "/search": {
+    path: "/pages/search.html",
+    title: "Search | Rafuni",
+  },
 };
 
 const handleLocation = async () => {

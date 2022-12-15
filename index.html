@@ -77,11 +77,11 @@
             >Contact Us</a
           >
           <div class="icons">
-            <i
+            <span
               class="fa fa-search searchToggle"
               aria-hidden="true"
-              onclick="toggleSearch()"
-            ></i>
+              onclick="toggleSearch(); goSearch(); route()"
+            ></span>
             <span
               class="material-symbols-outlined hamburger"
               id="hamburger"
@@ -143,5 +143,6 @@
     <script src="scripts/animations.js"></script>
     <script src="scripts/router.js"></script>
     <script src="scripts/carousel.js"></script>
+    <script src="scripts/search.js"></script>
   </body>
 </html>
