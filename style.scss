@@ -12,9 +12,10 @@ body {
 }
 
 h2 {
-  font-size: 42px;
-  font-weight: 700;
-  color: #333;
+  font-size: 42px !important;
+  font-weight: 700 !important;
+  color: #333 !important;
+  text-transform: uppercase !important;
 }
 
 .accent {
@@ -589,17 +590,12 @@ i {
   object-fit: cover;
 }
 
-.footer {
-  box-shadow: -2px -2px 5px 0px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: -2px -2px 5px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -2px -2px 5px 0px rgba(0, 0, 0, 0.75);
-}
-
 //About Us Page
 
 .about-header__article {
   img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
   }
   .col-md-8 {
@@ -727,15 +723,36 @@ i {
 }
 
 .service-Info {
+  flex-direction: column;
+  margin: 0 7vw;
   .row {
-    padding: 20px;
+    padding: 0;
   }
-  .col-sm-4 {
-    article {
+  .col-lg-4 {
+    padding: 18px;
+    nav {
+      box-shadow: -1px 1px 2px 2px #ea89278e;
+      -webkit-box-shadow: -2px 2px 2px 2px #ea87278e;
+      -moz-box-shadow: -1px 1px 4px 0px #ea87278e;
+      border-radius: 5px;
+      a {
+        text-decoration: none;
+        article {
+          p {
+            text-align: center;
+            color: #333;
+            font-size: 1.4vmax;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin: 0;
+          }
+        }
+      }
       img {
-        padding: 20px;
+        border-radius: 5px 5px 0 0;
         width: 100%;
-        object-fit: contain;
+        max-height: 400px;
+        object-fit: cover;
       }
       h2 {
         font-size: 22px;
@@ -753,6 +770,20 @@ i {
         min-height: 303px;
       }
     }
+  }
+}
+
+//individual sevices pages
+.sub__service-heading {
+  padding: 4% 8vw !important;
+}
+
+.sub__services-banner {
+  width: 100%;
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -852,5 +883,11 @@ i {
 
   .hiddenMenu {
     display: none;
+  }
+
+  .service-Info {
+    p {
+      font-size: 5vw !important;
+    }
   }
 }

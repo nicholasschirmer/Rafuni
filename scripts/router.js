@@ -14,6 +14,30 @@ const routes = {
     path: "/pages/contactUs.html",
     title: "Contatc Us | Rafuni",
   },
+  "/geo-hydro": {
+    path: "/pages/services/Geohydro.html",
+    title: "Our Services | Rafuni",
+  },
+  "/construction": {
+    path: "/pages/services/Construction.html",
+    title: "Our Services | Rafuni",
+  },
+  "/dolomite": {
+    path: "/pages/services/Dolo.html",
+    title: "Our Services | Rafuni",
+  },
+  "/environment": {
+    path: "/pages/services/Env.html",
+    title: "Our Services | Rafuni",
+  },
+  "/geo-tech": {
+    path: "/pages/services/Geotech.html",
+    title: "Our Services | Rafuni",
+  },
+  "/waste": {
+    path: "/pages/services/Waste.html",
+    title: "Our Services | Rafuni",
+  },
 };
 
 const handleLocation = async () => {
