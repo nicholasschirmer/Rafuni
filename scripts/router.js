@@ -51,6 +51,7 @@ const handleLocation = async () => {
   document.getElementById("page-container").innerHTML = html;
   if (path == "/") {
     carousel();
+    getCurrentYear();
   }
   document.title = route.title;
 };

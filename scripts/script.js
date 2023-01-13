@@ -34,3 +34,16 @@ const toggleMenu = () => {
     }, 250);
   }
 };
+
+function getCurrentYear() {
+  setTimeout(() => {
+    var today = new Date();
+    var init = new Date("July 1, 2015");
+    var sub = today.getFullYear() - init.getFullYear();
+    var diff = today.getMonth() - init.getMonth();
+    if (0 > diff) {
+      sub = sub - 1;
+    }
+    document.getElementById("totalYears").innerHTML = sub;
+  }, 300);
+}

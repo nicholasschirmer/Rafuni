@@ -4,13 +4,15 @@
   <br />
   <br />
   <br />
-  <input
-    type="Text"
-    class="searchBar"
-    id="searchParam"
-    placeholder="Search..."
-  />
-  <button onclick="filterPages()">SEARCH</button>
+  <form action="javascript:filterPages()">
+    <input
+      type="Text"
+      class="searchBar"
+      id="searchParam"
+      placeholder="Search..."
+    />
+    <button type="submit" onclick="filterPages()">SEARCH</button>
+  </form>
 </div>
 <div
   class="container searchResults"

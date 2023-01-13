@@ -809,6 +809,30 @@ i {
   }
 }
 
+.serviceImg {
+  box-sizing: border-box;
+  display: flex;
+  animation: scrolling 30s alternate infinite;
+  .col-md-3 {
+    flex: 0 0 16vw;
+    margin: 0 1vw;
+  }
+  img {
+    display: block;
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translatex(-1080px);
+  }
+}
+
 //contact us page
 .contact-us-img {
   img {
