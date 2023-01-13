@@ -1,7 +1,8 @@
 const pages = [
   {
     key: "About Us",
-    value: "who, skills, us, about, experience, clients",
+    value:
+      "who, skills, us, about, experience, clients, the, company, is, currently, registered, with, the, CIDB, as, 5, GB, PE, and, 6, CE, PE, Rafuni, has, been, registered, with, the, NHBRC, since, its, inception, and, remains, in, good, standing",
     path: "/about-us",
   },
   {
